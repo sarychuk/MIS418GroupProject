@@ -6,3 +6,6 @@ STEP Project
 * Timotei Albu
 * Luke Telidetzki
 * Paolo Fajardo
+
+## Client
+* Vince Davis
