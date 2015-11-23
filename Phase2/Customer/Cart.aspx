@@ -22,6 +22,8 @@
                     SortExpression="moviePrice" />
             </Columns>
         </asp:GridView>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+        </asp:DropDownList>
         <br />
         <asp:Label ID="lblTotal" runat="server" Text="Label"></asp:Label>
         <asp:SqlDataSource ID="sqldsCart" runat="server" 
