@@ -1,0 +1,10 @@
+﻿body
+{
+    background-image: url('images/bravo.jpg');
+    background-repeat: repeat;
+}
+.vsheadline
+{
+    color: #FF0000;
+    background-color: #FFFF00;
+}
