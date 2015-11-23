@@ -1,5 +1,6 @@
 # MIS418GroupProject
-STEP Project
+STEP Project for MIS 418. 
+Building a website for Safety Training Emergency Preparation (STEP) Ordering and Training.
 
 ## Contributors
 * Stephen Arychuk
