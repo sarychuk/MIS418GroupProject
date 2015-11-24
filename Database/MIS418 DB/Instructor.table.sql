@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[Instructor]
 (
 	InstructorID INT IDENTITY(1,1) NOT NULL,
+	LastName VARCHAR(255) NOT NULL,
+	GivenNames VARCHAR(255) NOT NULL,
+	HireDate DATETIME NOT NULL DEFAULT GETDATE(),
 
-	OfferingID INT,
-
-	CONSTRAINT pk_InstructorID PRIMARY KEY (InstructorID),
-	CONSTRAINT fk_InstructorOfferingID FOREIGN KEY (OfferingID) REFERENCES [dbo].[Offering](OfferingID)
+	CONSTRAINT pk_InstructorID PRIMARY KEY (InstructorID)
 )

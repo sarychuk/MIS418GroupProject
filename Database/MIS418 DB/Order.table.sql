@@ -1,9 +1,16 @@
 ﻿CREATE TABLE [dbo].[Order]
 (
 	OrderID INT IDENTITY(1,1) NOT NULL, 
-	
-	OrderItemID INT,
+	CustomerID INT NOT NULL,
+	PaymentTypeCode VARCHAR(4) NOT NULL,
+	AccountID INT NOT NULL,
+	OrderDate DATETIME NOT NULL DEFAULT GETDATE(),
+	RequiredDate DATETIME NOT NULL,
+	ShippedDate DATETIME NOT NULL,
+	ShipVia INT NOT NULL,
+	Freight SMALLMONEY NOT NULL,
 
 	CONSTRAINT pk_OrderID PRIMARY KEY (OrderID),
-	CONSTRAINT fk_OrderOrderItemID FOREIGN KEY (OrderItemID) REFERENCES [dbo].[OrderItem](OrderItemID)
+	CONSTRAINT fk_OrderCustomerID FOREIGN KEY (CustomerID) REFERENCES [dbo].[Customer](CustomerID),
+	CONSTRAINT fk_OrderAccountID FOREIGN KEY (AccountID) REFERENCES [dbo].[Account](AccountID)
 )
