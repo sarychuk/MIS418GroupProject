@@ -19,6 +19,12 @@
 &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" 
             Text="Safety Training Emergency Preparation"></asp:Label>
         </strong></p>
+    <p>
+        <asp:LoginName ID="LoginName1" runat="server" FormatString="Welcome, {0}" />
+    </p>
+    <p>
+        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+    </p>
     <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
         Orientation="Horizontal">
         <StaticMenuItemStyle BorderColor="Red" BorderWidth="1px" />

@@ -3,14 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p class="vsheadline">
-    This is our store starting page</p>
-    <p>
-        <asp:HyperLink ID="HyperLink1" runat="server" 
-            NavigateUrl="~/Customer/mainpage.aspx" ForeColor="#FF3300">Registered Customer Only</asp:HyperLink>
-</p>
-    <p>
-        &nbsp;</p>
-    <asp:HyperLink ID="HyperLink2" runat="server">This is a test</asp:HyperLink>
+    <asp:Label ID="lblWelcome" runat="server" Font-Bold="True" Font-Size="Large" 
+        Text="Welcome to the STEP Homepage"></asp:Label>
+    <br />
+    <br />
+    <asp:Label ID="lblRegister" runat="server" Text="Currently not a member?"></asp:Label>
+&nbsp;<asp:HyperLink ID="hlinkRegister" runat="server" 
+        NavigateUrl="~/registration.aspx">Register Now</asp:HyperLink>
+    <br />
+    <br />
+    <asp:Label ID="lblPlaceOrder" runat="server" Text="Place an order: "></asp:Label>
+&nbsp;<asp:HyperLink ID="hlinkViewCatalog" runat="server" 
+        NavigateUrl="~/ViewCatalog.aspx">View Catalog</asp:HyperLink>
+    <br />
 </asp:Content>
 
