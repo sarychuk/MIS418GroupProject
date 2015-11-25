@@ -21,12 +21,11 @@
             <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" 
                 CellPadding="4" DataKeyNames="ProductID" DataSourceID="sqldsProductTable" 
                 ForeColor="#333333" GridLines="None" Height="156px" HorizontalAlign="Left" 
-                Width="955px">
+                Width="1071px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="ProductID" HeaderText="ProductID" 
-                        InsertVisible="False" ReadOnly="True" SortExpression="ProductID" 
-                        Visible="False" />
+                        InsertVisible="False" ReadOnly="True" SortExpression="ProductID" />
                     <asp:BoundField DataField="ProductName" HeaderText="Product Name" 
                         SortExpression="ProductName" />
                     <asp:BoundField DataField="TopicCode" HeaderText="TopicCode" 
@@ -49,7 +48,7 @@
                     <asp:TemplateField HeaderText="Purchase">
                         <ItemTemplate>
                             <asp:Button ID="btnAddToCart" runat="server" CausesValidation="false" 
-                                CommandName="AddToCart" Text="Add to Cart"/>
+                                CommandName="AddToCart" Text="Add to Cart" CommandArgument="<%# Container.DataItemIndex %>"/>
                         </ItemTemplate>
                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
