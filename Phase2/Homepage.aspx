@@ -14,7 +14,7 @@
     <br />
     <asp:Label ID="lblPlaceOrder" runat="server" Text="Place an order: "></asp:Label>
 &nbsp;<asp:HyperLink ID="hlinkViewCatalog" runat="server" 
-        NavigateUrl="~/ViewCatalog.aspx">View Catalog</asp:HyperLink>
+        NavigateUrl="~/Customer/ViewCatalog.aspx">View Catalog</asp:HyperLink>
     <br />
 </asp:Content>
 

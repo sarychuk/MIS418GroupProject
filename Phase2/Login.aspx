@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
     <asp:Login ID="userLogin" runat="server" 
-        DestinationPageUrl="~/ViewCatalog.aspx">
+        DestinationPageUrl="~/Customer/ViewCatalog.aspx">
     </asp:Login>
 </p>
 <asp:ValidationSummary ID="ValidationSummary" runat="server" 
