@@ -3,21 +3,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:Panel ID="Panel1" runat="server" Height="297px">
-        <div style="height: 227px; background-color: #FFFFFF; background-repeat: repeat;">
+        <div style="height: 227px; " 
+            __designer:mapid="51">
             Product Type:
             <asp:DropDownList ID="ddlProductType" runat="server" AutoPostBack="True" 
                 DataSourceID="sqldsProductTypes" DataTextField="ProductTypeCode" 
                 DataValueField="ProductTypeCode">
             </asp:DropDownList>
-            <br />
-            <br />
+            <br __designer:mapid="53" />
+            <br __designer:mapid="54" />
             Topic:<asp:DropDownList ID="ddlProductTopic" runat="server" AutoPostBack="True" 
                 DataSourceID="sqlProducTopic" DataTextField="TopicCode" 
                 DataValueField="TopicCode">
             </asp:DropDownList>
-            <br />
-            <br />
+            <br __designer:mapid="56" />
+            <br __designer:mapid="57" />
             <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" 
                 CellPadding="4" DataKeyNames="ProductID" DataSourceID="sqldsProductTable" 
                 ForeColor="#333333" GridLines="None" Height="156px" HorizontalAlign="Left" 
@@ -48,7 +48,8 @@
                     <asp:TemplateField HeaderText="Purchase">
                         <ItemTemplate>
                             <asp:Button ID="btnAddToCart" runat="server" CausesValidation="false" 
-                                CommandName="AddToCart" Text="Add to Cart" CommandArgument="<%# Container.DataItemIndex %>"/>
+                                CommandName="AddToCart" Text="Add to Cart" 
+                                CommandArgument="<%# Container.DataItemIndex %>"/>
                         </ItemTemplate>
                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -65,31 +66,18 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <br />
-            <br />
+            <br __designer:mapid="75" />
+            <br __designer:mapid="76" />
         </div>
-        <br />
-        <br />
-        <br />
-        <asp:Panel ID="Panel2" runat="server" Height="189px">
-            <br />
-            <br />
-            <br />
+        <br __designer:mapid="77" />
+        <br __designer:mapid="78" />
             <asp:SqlDataSource ID="sqlProducTopic" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
-                SelectCommand="SELECT DISTINCT TopicCode FROM Product WHERE (ProductTypeCode = @productType) AND (Discontinued &lt;&gt; 1)">
+                
+                
+        SelectCommand="SELECT DISTINCT TopicCode FROM Product WHERE (ProductTypeCode = @productType) AND (Discontinued &lt;&gt; 1)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="ddlProductType" Name="productType" 
-                        PropertyName="SelectedValue" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-            <asp:SqlDataSource ID="sqldsProductTable" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
-                SelectCommand="SELECT ProductID, ProductName, TopicCode, ProductTypeCode, Style, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM Product WHERE (Discontinued &lt;&gt; 1) AND ProductTypeCode = @productType AND TopicCode = @topicCode">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="ddlProductType" DefaultValue=""
-                        Name="productType" PropertyName="SelectedValue" />
-                    <asp:ControlParameter ControlID="ddlProductTopic" Name="topicCode"
                         PropertyName="SelectedValue" />
                 </SelectParameters>
             </asp:SqlDataSource>
@@ -97,9 +85,17 @@
                 ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
                 SelectCommand="SELECT DISTINCT ProductTypeCode FROM Product">
             </asp:SqlDataSource>
-        </asp:Panel>
-    </asp:Panel>
-    <p>
-&nbsp;</p>
-</asp:Content>
+            <asp:SqlDataSource ID="sqldsProductTable" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
+                
+                
+        SelectCommand="SELECT ProductID, ProductName, TopicCode, ProductTypeCode, Style, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM Product WHERE (Discontinued &lt;&gt; 1) AND ProductTypeCode = @productType AND TopicCode = @topicCode">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ddlProductType" DefaultValue=""
+                        Name="productType" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="ddlProductTopic" Name="topicCode"
+                        PropertyName="SelectedValue" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            </asp:Content>
 

@@ -2,3 +2,35 @@
 {
     
 }
+
+body
+{
+    background-image: url('images/background.jpg');
+    background-repeat: repeat;
+}
+
+#Menu
+{
+    display: table;
+    margin: 0 auto;
+}
+
+body.div.Menu
+{
+    display: table;
+    margin: 0 auto;
+}
+
+.Menu
+{
+    display: table;
+    margin: 0 auto;
+}
+
+
+#menuContainer
+{
+    display: inline-block;
+    margin: 0 auto;
+}
+
