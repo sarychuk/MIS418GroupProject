@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Phase2", "Phase2\", "{8AD42675-F798-438F-B283-8B386B32024C}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Team3_Phase2_Prototype", "Team3_Phase2_Prototype\", "{8AD42675-F798-438F-B283-8B386B32024C}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/Phase2"
-		Debug.AspNetCompiler.PhysicalPath = "Phase2\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Phase2\"
+		Debug.AspNetCompiler.VirtualPath = "/Team3_Phase2_Prototype"
+		Debug.AspNetCompiler.PhysicalPath = "Team3_Phase2_Prototype\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Team3_Phase2_Prototype\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Phase2"
-		Release.AspNetCompiler.PhysicalPath = "Phase2\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Phase2\"
+		Release.AspNetCompiler.VirtualPath = "/Team3_Phase2_Prototype"
+		Release.AspNetCompiler.PhysicalPath = "Team3_Phase2_Prototype\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Team3_Phase2_Prototype\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
