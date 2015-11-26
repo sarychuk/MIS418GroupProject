@@ -7,14 +7,14 @@
         Text="Welcome to the STEP Homepage"></asp:Label>
     <br />
     <br />
-    <asp:Label ID="lblRegister" runat="server" Text="Currently not a member?"></asp:Label>
-&nbsp;<asp:HyperLink ID="hlinkRegister" runat="server" 
-        NavigateUrl="~/registration.aspx">Register Now</asp:HyperLink>
-    <br />
-    <br />
-    <asp:Label ID="lblPlaceOrder" runat="server" Text="Place an order: "></asp:Label>
-&nbsp;<asp:HyperLink ID="hlinkViewCatalog" runat="server" 
+    &nbsp;<asp:Label ID="lblPlaceOrder" runat="server" Text="Place an order: "></asp:Label>
+    <asp:HyperLink ID="hlinkViewCatalog" runat="server" 
         NavigateUrl="~/Customer/ViewCatalog.aspx">View Catalog</asp:HyperLink>
+&nbsp;<br />
+    <br />
+&nbsp;<asp:Label ID="lblRegister" runat="server" Text="Currently not a member?"></asp:Label>
+    <asp:HyperLink ID="hlinkRegister" runat="server" 
+        NavigateUrl="~/registration.aspx">Register Now</asp:HyperLink>
     <br />
 </asp:Content>
 
