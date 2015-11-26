@@ -47,15 +47,5 @@
     <p>
         <asp:Button ID="Button1" runat="server" Text="Checkout" />
     </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-</asp:Content>
+    </asp:Content>
 

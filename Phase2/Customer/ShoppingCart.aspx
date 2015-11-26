@@ -23,6 +23,9 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
+        &nbsp;<br />
+        Subtotal : 
+        <asp:TextBox ID="txtSubtotal" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnBuyItems" runat="server" Text="Buy" Width="88px" />
