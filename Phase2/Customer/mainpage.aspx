@@ -4,10 +4,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
-    This is customer main page</p>
+        Navigate to the following:</p>
     <p>
         <asp:HyperLink ID="HyperLink1" runat="server" 
-            NavigateUrl="~/Customer/ViewCatalog.aspx">Browse &amp; Shopping</asp:HyperLink>
+            NavigateUrl="~/Customer/ViewCatalog.aspx">View Catalog</asp:HyperLink>
+    </p>
+    <p>
+        <asp:HyperLink ID="HyperLink2" runat="server" 
+            NavigateUrl="~/Customer/ShoppingCart.aspx">Shopping Cart</asp:HyperLink>
+    </p>
+    <p>
+        <asp:HyperLink ID="HyperLink3" runat="server" 
+            NavigateUrl="~/Customer/MyProducts.aspx">Purchased Items</asp:HyperLink>
     </p>
     <p>
         &nbsp;</p>

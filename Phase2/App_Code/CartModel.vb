@@ -13,4 +13,8 @@ Public NotInheritable Class CartModel
         ds.Tables.Add(CartItems.Copy())
         Return ds
     End Function
+
+    Public Shared Sub DeleteCartItems(index As Integer)
+        CartItems.Rows.RemoveAt(index)
+    End Sub
 End Class

@@ -5,9 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="height: 222px">
         Your shoppping cart:<asp:GridView ID="gvShoppingCart" runat="server" 
-            DataSourceID="odsCart" CellPadding="4" ForeColor="#333333" GridLines="None" 
-            Width="907px">
+            DataSourceID="odsCart" CellPadding="4" 
+            EmptyDataText="There are no items in your cart." ForeColor="#333333" 
+            GridLines="None" Width="907px">
             <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:CommandField DeleteText="Remove" ShowDeleteButton="True" />
+            </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -22,7 +26,11 @@
         <br />
         <br />
         <asp:ObjectDataSource ID="odsCart" runat="server" SelectMethod="GetCartItems" 
-            TypeName="CartModel"></asp:ObjectDataSource>
+            TypeName="CartModel" DeleteMethod="DeleteCartItems">
+            <DeleteParameters>
+                <asp:Parameter Name="index" Type="Int32" />
+            </DeleteParameters>
+        </asp:ObjectDataSource>
     </div>
 </asp:Content>
 

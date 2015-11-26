@@ -17,7 +17,7 @@ Partial Class ViewCatalog
 
             If CartModel.CartItems.Rows.Count = 0 Then
                 For i As Integer = 0 To count - 1
-                    If Not gvProducts.Columns(i).Visible Or gvProducts.Columns(i).HeaderText = "Purchase" Then
+                    If Not gvProducts.Columns(i).Visible Or gvProducts.Columns(i).HeaderText = "Purchase" Or gvProducts.Columns(i).HeaderText = "Quantity / Unit" Then
                         Continue For
                     End If
                     Dim dtc As DataColumn = New DataColumn()
@@ -31,7 +31,7 @@ Partial Class ViewCatalog
             
             Dim dr As DataRow = dt.NewRow()
             For j As Integer = 0 To count - 1
-                If Not gvProducts.Columns(j).Visible Or gvProducts.Columns(j).HeaderText = "Purchase" Then
+                If Not gvProducts.Columns(j).Visible Or gvProducts.Columns(j).HeaderText = "Purchase" Or gvProducts.Columns(j).HeaderText = "Quantity / Unit" Then
                     Continue For
                 End If
                 dr(gvProducts.Columns(j).HeaderText) = selectedGridRow.Cells(j).Text
