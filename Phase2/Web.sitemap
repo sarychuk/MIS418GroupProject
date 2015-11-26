@@ -4,6 +4,7 @@
     <siteMapNode url="~/Homepage.aspx" title="Home"  description="Home page" />
     <siteMapNode url="~/Admin/adminMain.aspx" title="Admin"  description="Store Admininstration" />
     <siteMapNode url="~/Customer/mainpage.aspx" title="Customers"  description="Customer Main">
+      <siteMapNode url="~/Customer/MyAccount.aspx" title="My Account"  description="My Account" />
       <siteMapNode url="~/Customer/ViewCatalog.aspx" title="View Catalog"  description="View Catalog" />
       <siteMapNode url="~/Customer/ShoppingCart.aspx" title="Shopping Cart"  description="Shopping Cart" />
       <siteMapNode url="~/Customer/MyProducts.aspx" title="Purchased Items"  description="Purchased Items" />
