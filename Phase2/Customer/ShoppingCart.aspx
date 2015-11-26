@@ -25,6 +25,7 @@
         </asp:GridView>
         <br />
         <br />
+        <asp:Button ID="btnBuyItems" runat="server" Text="Buy" Width="88px" />
         <asp:ObjectDataSource ID="odsCart" runat="server" SelectMethod="GetCartItems" 
             TypeName="CartModel" DeleteMethod="DeleteCartItems">
             <DeleteParameters>

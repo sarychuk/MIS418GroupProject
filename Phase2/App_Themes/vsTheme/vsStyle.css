@@ -1,9 +1,4 @@
-﻿body
-{
-    background-image: url('images/background.jpg');
-    background-repeat: repeat;
-}
-.vsheadline
+﻿.vsheadline
 {
     color: #FF0000;
     background-color: #FFFF00;

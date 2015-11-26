@@ -9,11 +9,11 @@
         <asp:HyperLink ID="HyperLink1" runat="server" 
             NavigateUrl="~/Customer/ViewCatalog.aspx">View Catalog</asp:HyperLink>
     </p>
-    <p>
+<p>
         <asp:HyperLink ID="HyperLink2" runat="server" 
             NavigateUrl="~/Customer/ShoppingCart.aspx">Shopping Cart</asp:HyperLink>
     </p>
-    <p>
+<p>
         <asp:HyperLink ID="HyperLink3" runat="server" 
             NavigateUrl="~/Customer/MyProducts.aspx">Purchased Items</asp:HyperLink>
     </p>

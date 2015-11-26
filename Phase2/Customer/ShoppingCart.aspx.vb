@@ -2,13 +2,15 @@
 Partial Class Customer_ShoppingCart
     Inherits System.Web.UI.Page
 
-    Protected Sub GridView1_DataBound(sender As Object, e As System.EventArgs) Handles gvShoppingCart.DataBound
-        'For Each column As DataControlField In gvShoppingCart.Columns
-        '    For Each columVisible As DataControlField In CartModel.Columns
-        '        If column.HeaderText = columVisible.HeaderText Then
-        '            column.Visible = columVisible.Visible
-        '        End If
-        '    Next
-        'Next
+    Protected Sub btnBuyItems_Click(sender As Object, e As System.EventArgs) Handles btnBuyItems.Click
+        Response.Redirect("PaymentPage.aspx")
+    End Sub
+
+    Protected Sub gvShoppingCart_Load(sender As Object, e As System.EventArgs) Handles gvShoppingCart.Load
+        If gvShoppingCart.Rows.Count = 0 Then
+            btnBuyItems.Visible = False
+        Else
+            btnBuyItems.Visible = True
+        End If
     End Sub
 End Class

@@ -87,9 +87,9 @@
                 ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
                 SelectCommand="SELECT ProductID, ProductName, TopicCode, ProductTypeCode, Style, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM Product WHERE (Discontinued &lt;&gt; 1) AND ProductTypeCode = @productType AND TopicCode = @topicCode">
                 <SelectParameters>
-                    <asp:ControlParameter ControlID="ddlProductType" DefaultValue="" 
+                    <asp:ControlParameter ControlID="ddlProductType" DefaultValue=""
                         Name="productType" PropertyName="SelectedValue" />
-                    <asp:ControlParameter ControlID="ddlProductTopic" Name="topicCode" 
+                    <asp:ControlParameter ControlID="ddlProductTopic" Name="topicCode"
                         PropertyName="SelectedValue" />
                 </SelectParameters>
             </asp:SqlDataSource>
