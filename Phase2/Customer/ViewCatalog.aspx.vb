@@ -5,7 +5,6 @@ Partial Class ViewCatalog
 
     Protected Sub gvProducts_RowCommand(sender As Object, e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles gvProducts.RowCommand
         If e.CommandName = "AddToCart" Then
-
             Dim index As Integer = CType(e.CommandArgument, Integer)
             Dim selectedGridRow As GridViewRow = gvProducts.Rows(index)
             Dim dt As DataTable = New DataTable()
@@ -28,7 +27,7 @@ Partial Class ViewCatalog
             Else
                 dt = CartModel.CartItems
             End If
-            
+
             Dim dr As DataRow = dt.NewRow()
             For j As Integer = 0 To count - 1
                 If Not gvProducts.Columns(j).Visible Or gvProducts.Columns(j).HeaderText = "Purchase" Or gvProducts.Columns(j).HeaderText = "Quantity / Unit" Then
