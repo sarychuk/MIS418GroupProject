@@ -4,9 +4,10 @@ Partial Class ViewCatalog
     Inherits System.Web.UI.Page
 
     Protected Sub gvProducts_RowCommand(sender As Object, e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles gvProducts.RowCommand
+        Dim index As Integer = CType(e.CommandArgument, Integer)
+        Dim selectedGridRow As GridViewRow = gvProducts.Rows(index)
+
         If e.CommandName = "AddToCart" Then
-            Dim index As Integer = CType(e.CommandArgument, Integer)
-            Dim selectedGridRow As GridViewRow = gvProducts.Rows(index)
             Dim dt As DataTable = New DataTable()
             Dim count As Integer = gvProducts.Columns.Count
 
@@ -36,6 +37,8 @@ Partial Class ViewCatalog
                 dr(gvProducts.Columns(j).HeaderText) = selectedGridRow.Cells(j).Text
             Next
             CartModel.CartItems.Rows.Add(dr)
+        ElseIf e.CommandName = "GoToReviews" Then
+
         End If
 
         
