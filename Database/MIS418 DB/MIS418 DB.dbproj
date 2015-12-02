@@ -175,5 +175,11 @@
     <Build Include="Facility.table.sql">
       <SubType>Code</SubType>
     </Build>
+    <Build Include="ProductReview.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="insert_order.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
   </ItemGroup>
 </Project>
