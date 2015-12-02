@@ -38,7 +38,8 @@ Partial Class ViewCatalog
             Next
             CartModel.CartItems.Rows.Add(dr)
         ElseIf e.CommandName = "GoToReviews" Then
-
+            Customer.ReviewItem = CType(selectedGridRow.Cells(0).Text, Integer)
+            Response.Redirect("~/Customer/ViewReview.aspx")
         End If
 
         
