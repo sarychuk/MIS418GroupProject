@@ -26,20 +26,20 @@
         EmptyDataText="You have not purchased any courses.">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="OrderID" HeaderText="OrderID" InsertVisible="False" 
+            <asp:BoundField DataField="OrderID" HeaderText="Order ID" InsertVisible="False" 
                 ReadOnly="True" SortExpression="OrderID" />
-            <asp:BoundField DataField="ProductName" HeaderText="Product Name" 
+            <asp:BoundField DataField="ProductName" HeaderText="Name" 
                 SortExpression="ProductName" />
-            <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" 
+            <asp:BoundField DataField="OrderDate" HeaderText="Date Ordered" 
                 SortExpression="OrderDate" DataFormatString="{0:D}" />
-            <asp:BoundField DataField="RequiredDate" HeaderText="RequiredDate" 
+            <asp:BoundField DataField="RequiredDate" HeaderText="Date Required" 
                 SortExpression="RequiredDate" DataFormatString="{0:D}" />
-            <asp:BoundField DataField="ShippedDate" HeaderText="ShippedDate" 
+            <asp:BoundField DataField="ShippedDate" HeaderText="Date Shipped" 
                 SortExpression="ShippedDate" DataFormatString="{0:D}" />
             <asp:TemplateField HeaderText="Access">
                         <ItemTemplate>
                             <asp:Button ID="btnGoToCourse" runat="server" CausesValidation="false" 
-                                CommandName="goToCourse" Text="Open course..." CommandArgument="<%# Container.DataItemIndex %>"/>
+                                CommandName="GoToCourse" Text="Open course..." CommandArgument="<%# Container.DataItemIndex %>"/>
                         </ItemTemplate>
                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -64,16 +64,25 @@
         GridLines="None" Width="981px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="OrderID" HeaderText="OrderID" InsertVisible="False" 
+            <asp:BoundField DataField="OrderID" HeaderText="Order ID" InsertVisible="False" 
                 ReadOnly="True" SortExpression="OrderID" />
-            <asp:BoundField DataField="ProductName" HeaderText="ProductName" 
+            <asp:BoundField DataField="ProductName" HeaderText="Name" 
                 SortExpression="ProductName" />
             <asp:BoundField DataField="OrderDate" DataFormatString="{0:D}" 
-                HeaderText="OrderDate" SortExpression="OrderDate" />
+                HeaderText="Date Ordered" SortExpression="OrderDate" />
             <asp:BoundField DataField="RequiredDate" DataFormatString="{0:D}" 
-                HeaderText="RequiredDate" SortExpression="RequiredDate" />
+                HeaderText="Date Required" SortExpression="RequiredDate" />
             <asp:BoundField DataField="ShippedDate" DataFormatString="{0:D}" 
-                HeaderText="ShippedDate" SortExpression="ShippedDate" />
+                HeaderText="Date Shipped" SortExpression="ShippedDate" />
+            <asp:TemplateField HeaderText="Reviews">
+                        <ItemTemplate>
+                            <asp:Button ID="btnReview" runat="server" CausesValidation="false" 
+                                CommandName="GoToReviews" Text="Go to reviews..." 
+                                CommandArgument="<%# Container.DataItemIndex %>"/>
+                        </ItemTemplate>
+                        <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:TemplateField>
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

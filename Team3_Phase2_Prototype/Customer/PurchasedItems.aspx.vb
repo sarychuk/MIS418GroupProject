@@ -8,7 +8,7 @@ Partial Class Customer_OnSale
 
     Protected Sub GridView1_RowCommand(sender As Object, e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles GridView1.RowCommand
         Dim grid As GridView = CType(sender, GridView)
-        If e.CommandName = "goToCourse" Then
+        If e.CommandName = "GoToCourse" Then
             Dim index As Integer = CType(e.CommandArgument, Integer)
             Dim selectedGridRow As GridViewRow = grid.Rows(index)
             Customer.CurrentCourse = selectedGridRow.Cells(1).Text

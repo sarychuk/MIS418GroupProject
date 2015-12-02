@@ -54,7 +54,7 @@
                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Purchase">
+                    <asp:TemplateField HeaderText="Reviews">
                         <ItemTemplate>
                             <asp:Button ID="btnReview" runat="server" CausesValidation="false" 
                                 CommandName="GoToReviews" Text="Go to reviews..." 
