@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/StoreMaster.master" AutoEventWireup="false" CodeFile="Mainpage.aspx.vb" Inherits="Customer_mainpage" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/StoreMaster.master" AutoEventWireup="false" CodeFile="WelcomeScreen.aspx.vb" Inherits="Customer_mainpage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -15,7 +15,7 @@
     </p>
 <p>
         <asp:HyperLink ID="HyperLink3" runat="server" 
-            NavigateUrl="~/Customer/MyProducts.aspx">Purchased Items</asp:HyperLink>
+            NavigateUrl="~/Customer/PurchasedItems.aspx">Purchased Items</asp:HyperLink>
     </p>
     <p>
         &nbsp;</p>

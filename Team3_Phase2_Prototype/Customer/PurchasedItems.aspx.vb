@@ -12,7 +12,7 @@ Partial Class Customer_OnSale
             Dim index As Integer = CType(e.CommandArgument, Integer)
             Dim selectedGridRow As GridViewRow = grid.Rows(index)
             Customer.CurrentCourse = selectedGridRow.Cells(1).Text
-            Response.Redirect("OnlineCourse.aspx")
+            Response.Redirect("CourseContent.aspx")
         End If
     End Sub
 End Class
