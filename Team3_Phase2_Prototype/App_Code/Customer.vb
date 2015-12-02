@@ -4,7 +4,8 @@ Imports System.Data
 
 Public NotInheritable Class Customer
     Public Shared CurrentCourse As String = String.Empty
-    Public Shared ReviewItem As Integer = -1
+    Public Shared ReviewItemID As Integer = -1
+    Public Shared ReviewItemName As String = "No product reviews to show"
 
     Sub New()
     End Sub

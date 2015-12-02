@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/StoreMaster.master" AutoEventWireup="false" CodeFile="ViewReview.aspx.vb" Inherits="Customer_ViewReview" %>
 
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
         #Text1
@@ -26,55 +28,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:FormView ID="FormView1" runat="server" DataSourceID="sqldsReviewItem" 
-        EmptyDataText="No reviews available." Width="719px">
-        <EditItemTemplate>
-            Reviewed By:
-            <asp:TextBox ID="Reviewed_ByTextBox" runat="server" 
-                Text='<%# Bind("[Reviewed By]") %>' />
-            <br />
-            Rating:
-            <asp:TextBox ID="RatingTextBox" runat="server" Text='<%# Bind("Rating") %>' />
-            <br />
-            Review:
-            <asp:TextBox ID="ReviewTextBox" runat="server" 
-                Text='<%# Bind("Review") %>' />
-            <br />
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
-                CommandName="Update" Text="Update" />
-            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
-                CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-        </EditItemTemplate>
-        <InsertItemTemplate>
-            Reviewed By:
-            <asp:TextBox ID="Reviewed_ByTextBox" runat="server" 
-                Text='<%# Bind("[Reviewed By]") %>' />
-            <br />
-            Rating:
-            <asp:TextBox ID="RatingTextBox" runat="server" Text='<%# Bind("Rating") %>' />
-            <br />
-            Review:
-            <asp:TextBox ID="ReviewTextBox" runat="server" 
-                Text='<%# Bind("Review") %>' />
-            <br />
-            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
-                CommandName="Insert" Text="Insert" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
-                CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-        </InsertItemTemplate>
-        <ItemTemplate>
-            Reviewed By:
-            <asp:Label ID="Reviewed_ByLabel" runat="server" 
-                Text='<%# Bind("[Reviewed By]") %>' />
-            <br />
-            Rating:
-            <asp:Label ID="RatingLabel" runat="server" Text='<%# Bind("Rating") %>' />
-            <br />
-            Review:
-            <asp:Label ID="ReviewLabel" runat="server" Text='<%# Bind("Review") %>' />
-            <br />
-        </ItemTemplate>
-    </asp:FormView>
     <asp:SqlDataSource ID="sqldsReviewItem" runat="server" 
         ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
         InsertCommand="INSERT INTO ProductReview(ReviewStar, ReviewText, ReviewedBy, ProductID) VALUES (@ReviewStar, @ReviewText, @ReviewedBy, @ProductID)" 
@@ -90,7 +43,28 @@
             <asp:Parameter Name="productID" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <br />
+    Reviews for :
+    <asp:Label ID="lblProductName" runat="server"></asp:Label>
+    <br />
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="sqldsReviewItem" 
+        Height="63px" Width="650px">
+        <ItemTemplate>
+            Reviewed By:
+            <asp:Label ID="Reviewed_ByLabel" runat="server" 
+                Text='<%# Eval("[Reviewed By]") %>' />
+            <br />
+            Rating:
+            <asp:Label ID="RatingLabel" runat="server" Text='<%# Eval("Rating") %>' />
+            <br />
+            Review:
+            <asp:Label ID="ReviewLabel" runat="server" Text='<%# Eval("Review") %>' />
+            <br />
+<br />
+        </ItemTemplate>
+    </asp:DataList>
     <div id="divReview" style="height: 397px">
+        <br />
         Leave a review<br />
         <br />
         Rating:
@@ -103,6 +77,7 @@
         </asp:RadioButtonList>
         <br />
         Review:<br />
+
         <asp:TextBox ID="txtReview" runat="server" Height="99px" Width="271px" 
             MaxLength="8000" TextMode="MultiLine"></asp:TextBox>
         <br />
