@@ -28,9 +28,8 @@ body.div.Menu
 }
 
 
-#menuContainer
+#wrapper
 {
-    display: inline-block;
-    margin: 0 auto;
+    margin: auto;
 }
 

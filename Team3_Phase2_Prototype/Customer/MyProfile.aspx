@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server">
-    <br />
+    <div style="margin: 0 auto" align="center">
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
             CellPadding="4" DataKeyNames="CustomerID" DataSourceID="sqldsMyAccount" 
             ForeColor="#333333" GridLines="None" Height="50px" Width="172px">
@@ -43,7 +43,7 @@
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
             <RowStyle BackColor="#EFF3FB" />
         </asp:DetailsView>
-    <br />
+    <div />
     <asp:SqlDataSource ID="sqldsMyAccount" runat="server" 
         ConnectionString="<%$ ConnectionStrings:group3ConnectionString %>" 
         

@@ -3,11 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p>
-    <asp:Login ID="userLogin" runat="server" 
-        DestinationPageUrl="~/Customer/ViewCatalog.aspx">
-    </asp:Login>
-</p>
+    <div style="margin: 0 auto" align="center">
+        <asp:Login ID="userLogin" runat="server" DestinationPageUrl="~/Customer/ViewCatalog.aspx">
+        </asp:Login>
+    </div>
 <asp:ValidationSummary ID="ValidationSummary" runat="server" 
     ValidationGroup="userLogin" />
 Don&#39;t have an account with us?<br />
