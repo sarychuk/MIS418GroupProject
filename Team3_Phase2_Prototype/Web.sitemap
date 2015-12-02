@@ -2,12 +2,10 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="" title="STEP"  description="STEP">
     <siteMapNode url="~/Homepage.aspx" title="Home"  description="Home page" />
-    <siteMapNode url="~/Admin/adminMain.aspx" title="Admin"  description="Store Admininstration" />
-    <siteMapNode url="~/Customer/WelcomeScreen.aspx" title="Customers"  description="Customer Main">
-      <siteMapNode url="~/Customer/MyProfile.aspx" title="My Profile"  description="My Profile" />
-      <siteMapNode url="~/Customer/ViewCatalog.aspx" title="View Catalog"  description="View Catalog" />
-      <siteMapNode url="~/Customer/ShoppingCart.aspx" title="Shopping Cart"  description="Shopping Cart" />
-      <siteMapNode url="~/Customer/PurchasedItems.aspx" title="Purchased Items"  description="Purchased Items" />
-    </siteMapNode>
+    <siteMapNode url="~/Customer/MyProfile.aspx" title="My Profile"  description="My Profile" />
+    <siteMapNode url="~/Customer/ViewCatalog.aspx" title="View Catalog"  description="View Catalog" />
+    <siteMapNode url="~/Customer/ShoppingCart.aspx" title="Shopping Cart"  description="Shopping Cart" />
+    <siteMapNode url="~/Customer/PurchasedItems.aspx" title="Purchased Items"  description="Purchased Items" />
+    <siteMapNode url="~/About.aspx" title="About Us" description="About STEP" />
   </siteMapNode>
 </siteMap>

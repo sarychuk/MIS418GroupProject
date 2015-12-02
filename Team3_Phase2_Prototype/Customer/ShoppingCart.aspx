@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="height: 222px; margin: 0 auto;" align="center">
-        Your shoppping cart:<asp:GridView ID="gvShoppingCart" runat="server" 
+        Your shopping cart:<asp:GridView ID="gvShoppingCart" runat="server" 
             DataSourceID="odsCart" CellPadding="4" 
             EmptyDataText="There are no items in your cart." ForeColor="#333333" 
             GridLines="None" Width="907px" HorizontalAlign="Center">

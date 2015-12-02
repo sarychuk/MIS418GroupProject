@@ -4,7 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
-        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Label" Font-Bold="True" 
+            Font-Size="Medium"></asp:Label>
     </p>
     <p>
         Below is a sample of the course outline. Will try to integrate Moodle with out 

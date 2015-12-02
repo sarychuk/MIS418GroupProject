@@ -21,5 +21,7 @@ Partial Class Customer_PaymentPage
         Next
         con.Close()
         CartModel.CartItems.Clear()
+
+        Response.Redirect("~/Customer/PurchasedItems.aspx")
     End Sub
 End Class
