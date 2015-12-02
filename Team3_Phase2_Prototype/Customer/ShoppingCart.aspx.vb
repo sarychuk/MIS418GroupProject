@@ -18,7 +18,7 @@ Partial Class Customer_ShoppingCart
             txtSubtotal.Enabled = True
             Dim total As Double = 0
             For j As Integer = 0 To grid.Rows.Count - 1
-                Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 1).Text
+                Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 2).Text
                 If price.Length = 0 Then
                     total += 0
                 Else
@@ -34,7 +34,7 @@ Partial Class Customer_ShoppingCart
         Dim grid As GridView = CType(sender, GridView)
         Dim total As Double = 0
         For j As Integer = 0 To grid.Rows.Count - 1
-            Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 1).Text
+            Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 2).Text
             If price.Length = 0 Then
                 total += 0
             Else
@@ -50,7 +50,7 @@ Partial Class Customer_ShoppingCart
         Dim test As Object = e.Values(3)
         Dim total As Double = 0
         For j As Integer = 0 To grid.Rows.Count - 1
-            Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 1).Text
+            Dim price As String = grid.Rows(j).Cells(grid.Rows(j).Cells.Count - 2).Text
             If price.Length = 0 Then
                 total += 0
             Else
