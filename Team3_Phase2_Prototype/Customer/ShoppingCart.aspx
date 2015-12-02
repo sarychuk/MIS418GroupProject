@@ -7,12 +7,13 @@
         Your shoppping cart:<asp:GridView ID="gvShoppingCart" runat="server" 
             DataSourceID="odsCart" CellPadding="4" 
             EmptyDataText="There are no items in your cart." ForeColor="#333333" 
-            GridLines="None" Width="907px">
+            GridLines="None" Width="907px" HorizontalAlign="Center">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField DeleteText="Remove" ShowDeleteButton="True" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
+            <EmptyDataRowStyle HorizontalAlign="Center" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
