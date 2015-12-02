@@ -25,7 +25,7 @@
         </asp:GridView>
         &nbsp;<br />
         Subtotal : 
-        <asp:TextBox ID="txtSubtotal" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtSubtotal" runat="server" Enabled="False"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnBuyItems" runat="server" Text="Buy" Width="88px" />
