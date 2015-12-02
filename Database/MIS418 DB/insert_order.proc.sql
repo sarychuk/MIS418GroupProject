@@ -56,6 +56,22 @@ DECLARE @OrderID INT
 
 SELECT @OrderID = SCOPE_IDENTITY()
 
+
+INSERT INTO [OrderItem]
+(
+	   [OrderID]
+      ,[ProductID]
+      ,[Quantity]
+      ,[Discount]
+)
+VALUES
+(
+	@OrderID
+	,@ProductID
+	,1
+	,0
+)
+
 COMMIT TRANSACTION
 
 GO
